@@ -11,8 +11,6 @@ public class UserController {
 	@RequestMapping("userList")
 	public String userList(){
 		
-		System.out.println("123415465");
-		
 		return "user/userList";
 	}
 	

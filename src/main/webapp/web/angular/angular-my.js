@@ -1,9 +1,9 @@
 var projectName = '/' + window.location.pathname.split('/')[1];
 var userUrl = {
-    'addUrl' : projectName + '/user/add',
-    'deleteUrl' : projectName + '/user/delete',
-    'updateUrl' : projectName + '/user/update',
-    'queryUrl' : projectName + '/user/userList'
+    'addUrl' : projectName + '/addUser.html',
+    'deleteUrl' : projectName + '/delete',
+    'updateUrl' : projectName + '/update',
+    'queryUrl' : projectName + '/getUserList.html'
 };
 var user = angular.module('userService', [ 'ngResource' ], angular.noop);
 user.controller('userController', function($scope, $resource) {
@@ -32,17 +32,15 @@ user.controller('userController', function($scope, $resource) {
         }
     };
     var getUserList = $resource(userUrl.queryUrl, {
-        page : 1,
-        pageSize : 20
     }, actions);
     getUserList.query({}, function(data) {
+    	
         subobj = data;
         $scope.mydata = data;
     });
     var userAdd = $resource(userUrl.addUrl, {
-        page : 1,
-        pageSize : 20
     }, actions);
+    
     $scope.addUserClick = function() {
         userAdd.add($scope.saveUser, function(data) {
             subobj = data;

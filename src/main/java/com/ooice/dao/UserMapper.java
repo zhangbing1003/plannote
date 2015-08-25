@@ -16,9 +16,7 @@ public interface UserMapper {
      */
     public int insertUser(User user);
     
-    
     public User selectUser(User user);
-    
     
     public int updateUser(User user);
     

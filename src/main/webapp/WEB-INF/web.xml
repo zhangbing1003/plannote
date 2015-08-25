@@ -44,7 +44,7 @@
      <servlet-mapping>
         <servlet-name>springMvc</servlet-name>
         <!-- struts习惯使用/*，在springmvc不管用 使用html伪装请求-->
-        <url-pattern>*.html</url-pattern>
+        <url-pattern>/</url-pattern>
    </servlet-mapping>
     
 	  <filter>  
@@ -101,7 +101,7 @@
     </error-page>
     
   <welcome-file-list>
-    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>

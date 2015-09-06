@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="plannote/web/css/detail.css" type="text/css" />
+<div class="">
+
+	<p class="detail-title">{{xq.branch_name}}</p>
+	<p class='detail-subtitle'>{{xq.branch_type}}</p>
+	<p></p>
+	<div>
+		<p ng-bind-html="myHTML"></p>
+	</div>
+
+	<ul class="list-box" id="wd-list">
+		<li>
+		<p class="list-title">
+			精选推荐
+		</p>
+		</li>
+		<li ng-repeat="item in xq.shops.items">
+			<a href="plannote/#/shxq">
+			<dl>
+				<dt class="search-key-img">
+					<img ng-src="{{item.shop_logo}}">
+				</dt>
+				<dd class="search-key-title"><span class="list-title">{{item.shop_name}}</span><span class="list-right">{{item.shop_type}}</span></dd><dd class="search-key-info">
+				<p class="list-cont">
+					{{item.shop_preferential}}
+				</p>
+				</dd><dd class="search-key-tag">
+				<p>
+					<img href="plannote/web/images/cz.png">{{item.view_count}}
+				</p>
+				<p>
+					<img href="plannote/web/images/love.png">{{item.favorite_count}}
+				</p>
+				<p>
+					<img href="plannote/web/images/rj.png">{{item.capita_consumption}}元/人
+				</p>
+				</dd>
+			</dl>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<!-- 电话box -->
+<tel-box show="boxShow"></tel-box>

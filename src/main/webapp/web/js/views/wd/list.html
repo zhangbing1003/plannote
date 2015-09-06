@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="plannote/web/css/index.css" type="text/css" />
+    <div class="list-box center-block">
+       <ul>
+        <li ng-repeat="webpage in webpages">
+          <a href="plannote/#/detail">
+           <dl>
+            <dt class="search-key-img img-thumbnail">
+              <img ng-src="{{webpage.image}}">
+            </dt> 
+            <dd class="search-key-title">
+               <p>{{webpage.title}}</p>
+              </dd>
+              <dd class="search-key-info">
+               <p>{{webpage.type}}</p>
+              </dd>
+              <dd class="search-key-tag">
+                <p>{{webpage.summary}}</p>
+              </dd>
+            </dl>
+          </a>
+        </li>
+       </ul>
+        <p class="get-more" ng-click="getMore()">加载更多</p>
+    </div>
+
+    <!-- <div geo refresh="refreshGeo()"></div> -->
